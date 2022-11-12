@@ -1,3 +1,7 @@
+# 00_introductions.ps1
+
+# Basic steps of configuration, after installation of Windows 2019 Server
+
 # Initial check:
 Get-ComputerInfo
 Get-WmiObject Win32_Computersystem
