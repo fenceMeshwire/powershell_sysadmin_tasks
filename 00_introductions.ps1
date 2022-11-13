@@ -11,6 +11,8 @@ Get-NetFirewallProfile -Profile Public
 # Settings
 # 1. Change IPv4 address:
 New-NetIPAddress -InterfaceAlias Ethernet0 -IPAddress 192.168.17.100 -PrefixLength 24
+# Alternative:
+# netsh interface ipv4 set address name="Ethernet0" source=static address=192.168.17.100 mask=255.255.255.0
 
 # 2. Deactivate Firewall (optional, if you'd like to):
 Set-NetFirewallProfile -Profile Public -Enabled False
