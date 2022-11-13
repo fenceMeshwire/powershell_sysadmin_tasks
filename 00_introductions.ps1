@@ -14,7 +14,7 @@ New-NetIPAddress -InterfaceAlias Ethernet0 -IPAddress 192.168.17.100 -PrefixLeng
 
 # 2. Deactivate Firewall (optional, if you'd like to):
 Set-NetFirewallProfile -Profile Public -Enabled False
-# 2a. Deactivate Firewall for all profiles(optional, if you'd like to):
+# 2a. Deactivate Firewall for all profiles (optional, if you'd like to):
 netsh advfirewall set allprofiles state off
 
 # 3. Change Hostname:
