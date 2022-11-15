@@ -18,3 +18,6 @@ Remove-Partition -DriveLetter L
 
 # Finally show all partitions
 Get-Partition
+
+# OPTIONAL: Swap partition numbers if anything went wrong
+Set-Partition -DiskNumber 0 1
