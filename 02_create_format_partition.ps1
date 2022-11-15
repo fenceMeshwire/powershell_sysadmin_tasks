@@ -13,7 +13,7 @@ Format-Volume -DriveLetter L -Filesystem NTFS
 # Resize the partition to a specific size
 Resize-Partition -DriveLetter L -Size 10GB
 
-# Change the name of the label (name of the partition)
+# Change the name of the label (name of the partition) to "Archive":
 $Drive = Get-CimInstance -ClassName Win32_Volume -Filter "DriveLetter = 'L:'"
 $Drive | Set-CimInstance -Property @{Label='Archive'}
 Get-CimInstance -ClassName Win32_Volume -Filter "DriveLetter = 'Z:'" | Select-Object -Property SystemName, Label, DriveLetter
