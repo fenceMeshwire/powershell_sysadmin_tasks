@@ -16,7 +16,7 @@ Resize-Partition -DriveLetter L -Size 10GB
 # Change the name of the label (name of the partition) to "Archive":
 $Drive = Get-CimInstance -ClassName Win32_Volume -Filter "DriveLetter = 'L:'"
 $Drive | Set-CimInstance -Property @{Label='Archive'}
-Get-CimInstance -ClassName Win32_Volume -Filter "DriveLetter = 'Z:'" | Select-Object -Property SystemName, Label, DriveLetter
+Get-CimInstance -ClassName Win32_Volume -Filter "DriveLetter = 'L:'" | Select-Object -Property SystemName, Label, DriveLetter
 
 # If necessary remove the partition (optional command)
 Remove-Partition -DriveLetter L
