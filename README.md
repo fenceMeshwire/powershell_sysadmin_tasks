@@ -6,5 +6,5 @@
 <li>Create, format and remove partitions -> 02_create_format_partition.ps1</li>
 <li>Show the system properties -> 03_system_properties.ps1</li>
 <li>...</li>
-<li>Miscellaneous Commands</li>
+<li>Miscellaneous Commands -> 99_misc.ps1</li>
 </ol>
