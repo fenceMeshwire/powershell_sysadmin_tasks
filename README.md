@@ -6,5 +6,7 @@
 <li>Create, format and remove partitions -> 02_create_format_partition.ps1</li>
 <li>Show the system properties -> 03_system_properties.ps1</li>
 <li>...</li>
+<li>...</li>
+<li>Downgrade a domain controller-> 06_downgrade_domain_controller.ps1</li>
 <li>Miscellaneous Commands -> 99_misc.ps1</li>
 </ol>
