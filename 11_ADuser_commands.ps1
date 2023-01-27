@@ -14,9 +14,9 @@ $identity.Name                # Returns the Name
 $identity.SID                 # Returns the SID
 $identity.UserPrincipalName   # Returns username@domain
 
-# Delete local user:
+# Delete AD user:
 Remove-Aduser username -Confirm:$False    # Delete the username without confirmation
                                           # Note: write username as is, no declaration
-# Create local user:
+# Create AD user:
 $password = Read-Host -AsSecureString
 New-ADUser -Name "user" -Accountpassword $password -OtherAttributes @{'title'="worker";'mail'="user@company.com"} -PasswordNotRequired:$False
