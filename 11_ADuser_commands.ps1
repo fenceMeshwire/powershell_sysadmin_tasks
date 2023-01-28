@@ -31,14 +31,13 @@ $password = Read-Host -AsSecureString
 New-ADUser -Name "user" -Accountpassword $password -OtherAttributes @{'title'="worker";'mail'="user@company.com"} -PasswordNotRequired:$False
 
 # Alternatively (given OU has already been created):
-$common_name = "CN=Sam Sample"
-$attributes = $common_name + ",OU=Sales,OU=my_domain,DC=my_company,DC=org"
-$username = "SampleS"
-$domain_name = "my_domain.org"
-$upn = $username + "@"+ $domain_name
 $fn = "Sam"
 $ln = "Sample"
 $disp = $fn + " " + $ln
+$common_name = "CN=" + $fn + " " +$ln
+$attributes = $common_name + ",OU=Sales,OU=my_domain,DC=my_company,DC=org"
+$domain_name = "my_domain.org"
+$upn = $username + "@" + $domain_name
 $pwd = "13thWarrior!"
 
 # Command:
