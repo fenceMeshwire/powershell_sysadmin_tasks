@@ -34,7 +34,7 @@ New-ADUser -Name "user" -Accountpassword $password -OtherAttributes @{'title'="w
 $fn = "Sam"
 $ln = "Sample"
 $disp = $fn + " " + $ln
-$common_name = "CN=" + $fn + " " +$ln
+$common_name = "CN=" + $fn + " " + $ln
 $attributes = $common_name + ",OU=Sales,OU=my_domain,DC=my_company,DC=org"
 $domain_name = "my_domain.org"
 $upn = $username + "@" + $domain_name
