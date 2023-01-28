@@ -9,9 +9,10 @@ Get-ADUser -Identity SampleS
 
 $identity = Get-ADUser -Identity 'YOUR-USER'
 $identity                     # Returns all information
-$identity.Name                # Returns the Name
+$identity.Name                # Returns the Name (common name)
 $identity.SID                 # Returns the SID
 $identity.UserPrincipalName   # Returns username@domain
+$identity.samAccountName      # Returns username
 # _____________________________________________________________________
 # Obtain AD user information by using the SID
 # SID: S-X-X-XX-XXXXXXXXX-XXXXXXXXXX-XXXXXXX-XXXX
