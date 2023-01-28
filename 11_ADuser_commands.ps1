@@ -24,7 +24,24 @@ $identity.UserPrincipalName   # Returns username@domain
 # _____________________________________________________________________
 # Delete AD user:
 Remove-Aduser username -Confirm:$False    # Delete the username without confirmation
-# _____________________________________________________________________                                          # Note: write username as is, no declaration
+#             Note: write username as is, no declaration
+# _____________________________________________________________________     
 # Create AD user:
 $password = Read-Host -AsSecureString
 New-ADUser -Name "user" -Accountpassword $password -OtherAttributes @{'title'="worker";'mail'="user@company.com"} -PasswordNotRequired:$False
+
+# Alternatively (given OU has already been created):
+$common_name = "CN=Sam Sample"
+$attributes = $common_name + ",OU=Sales,OU=my_domain,DC=my_company,DC=org"
+$username = "SampleS"
+$domain_name = "my_domain.org"
+$upn = $username + "@"+ $domain_name
+$fn = "Sam"
+$ln = "Sample"
+$disp = $fn + " " + $ln
+$pwd = "13thWarrior!"
+
+# Command:
+dsadd user $attributes -samid $username -upn $upn -fn $fn -ln $ln -display $disp -mustchpwd no -pwd $pwd
+# _____________________________________________________________________   
+
