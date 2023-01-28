@@ -1,0 +1,3 @@
+# Delete AD Group
+
+Get-ADGroup -Filter 'Name -like "Project XY*"' | Remove-ADGroup
