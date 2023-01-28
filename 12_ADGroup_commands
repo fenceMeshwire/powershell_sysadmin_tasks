@@ -1,3 +1,4 @@
 # Delete AD Group
 
 Get-ADGroup -Filter 'Name -like "Project XY*"' | Remove-ADGroup
+Restart-Computer # or: shutdown /r /t 0
