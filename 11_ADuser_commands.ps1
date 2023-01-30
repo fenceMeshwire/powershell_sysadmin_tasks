@@ -22,6 +22,9 @@ $identity.Name                # Returns the Name
 $identity.SID                 # Returns the SID
 $identity.UserPrincipalName   # Returns username@domain
 # _____________________________________________________________________
+# Show search results as table:
+Get-ADUser -Filter "Surname -eq 'Sample'" | Format-Table Surname, GivenName, samAccountName
+
 # Delete AD user:
 Remove-Aduser username -Confirm:$False    # Delete the username without confirmation
 #             Note: write username as is, no declaration
