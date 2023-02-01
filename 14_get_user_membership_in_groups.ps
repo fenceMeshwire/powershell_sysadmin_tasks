@@ -1,0 +1,5 @@
+# Get the membership of a user in groups:
+$identity = Get-ADUser -Filter "Name -eq 'Sandy Cheeks'"
+
+
+Get-ADPrincipalGroupMembership $identity.DistinguishedName | select name
