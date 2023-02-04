@@ -21,8 +21,8 @@ $identity.samAccountName      # Returns username
 #      -X:  Revision number
 #        -X:  Identifier Authority
 #          -XX-XXXXXXXXX-XXXXXXXXXX-XXXXXXX:  local systems number
-#                                           -XXXX: user number; 500=Administrator;
-#                                                               1000+ = User
+#                                           -XXXX: user number; 500 = Administrator;
+#                                                               1000 and above = User;
 #
 $identity = Get-ADUser -Identity 'SID'
 $identity                     # Returns all information
