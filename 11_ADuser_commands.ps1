@@ -39,7 +39,10 @@ Remove-Aduser username -Confirm:$False    # Delete the username without confirma
 # _________________________________________________________________________________________     
 # Create AD user:
 $password = Read-Host -AsSecureString
-New-ADUser -Name "user" -Accountpassword $password -OtherAttributes @{'title'="worker";'mail'="user@company.com"} -PasswordNotRequired:$False
+New-ADUser -Name "user" `
+  -Accountpassword $password `
+  -OtherAttributes @{'title'="worker";'mail'="user@company.com"} `
+  -PasswordNotRequired:$False
 
 # Alternatively (given OU has already been created):
 $fn = "Sam"
