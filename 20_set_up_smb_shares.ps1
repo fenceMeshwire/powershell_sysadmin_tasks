@@ -4,6 +4,12 @@
 # 1. "C:\Windows\system32\svchost.exe -k LocalServiceAndNoImpersonation -p" on "AutomaticDelayedStart"
 # 2. "C:\Windows\System32\svchost.exe -k LocalServiceNetworkRestricted" on "AutomaticDelayedStart"
 
+Set-NetFirewallRule FPS-SMB-In-TCP -Enabled True
+Set-NetFirewallRule FPS-ICMP4-ERQ-In -Enabled True
+# To deactivate:
+Set-NetFirewallRule FPS-ICMP4-ERQ-In -Enabled False
+Set-NetFirewallRule FPS-SMB-In-TCP -Enabled False
+
 # ________________________________________________________________________________________
 $Parameters = @{
     Name = 'Data'
