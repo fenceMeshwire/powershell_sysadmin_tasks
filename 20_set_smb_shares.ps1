@@ -15,7 +15,7 @@ New-SmbShare @Parameters
 # Show directory permissions:
 $path = "Y:"
 (get-acl $path).access | ft IdentityReference,FileSystemRights,AccessControlType,IsInherited,InheritanceFlags -auto
-
+# ________________________________________________________________________________________
 # Create and administer shares
 # <share> is a placeholder for a specific share.
 # <groupname> is a placeholder for a specific group.
@@ -33,3 +33,6 @@ net share <share> "/unlimited"
 
 # Limit the users for the share:
 net share <share> "/users:<number>"
+
+# List files which are currently opened over the network
+net file
