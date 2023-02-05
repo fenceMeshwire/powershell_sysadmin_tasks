@@ -36,3 +36,6 @@ net share <share> "/users:<number>"
 
 # List files which are currently opened over the network
 net file
+
+# List current active sessions
+net session
