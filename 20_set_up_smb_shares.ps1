@@ -15,6 +15,7 @@ New-SmbShare @Parameters
 # Show directory permissions:
 $path = "Y:"
 (get-acl $path).access | ft IdentityReference,FileSystemRights,AccessControlType,IsInherited,InheritanceFlags -auto
+
 # ________________________________________________________________________________________
 # Create and administer shares
 # <share> is a placeholder for a specific share.
@@ -39,3 +40,9 @@ net file
 
 # List current active sessions
 net session
+
+# ________________________________________________________________________________________
+# Use of icacls.exe:
+# 
+# <groupname> is a placeholder for a specific group.
+# icacls C:\directory\misc /grant <groupname>:F
