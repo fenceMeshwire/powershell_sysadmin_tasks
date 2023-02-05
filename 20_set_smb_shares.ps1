@@ -11,3 +11,7 @@ $Parameters = @{
 }
 # Everybody is able to read the data within the directory above.
 New-SmbShare @Parameters
+
+# Show directory permissions:
+$path = "Y:"
+(get-acl $path).access | ft IdentityReference,FileSystemRights,AccessControlType,IsInherited,InheritanceFlags -auto
