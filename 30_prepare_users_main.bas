@@ -1,8 +1,10 @@
 Option Explicit
 
-' ____________________________________________________________________________________________________
+' ________________________________________________________________________________________________________________
 ' Methods are to be found at 31_prepare_users_methods.bas
-' ____________________________________________________________________________________________________
+' Methods are e.g. "get_filename", "import_csv_data", etc.
+' Program can be used in order to assign usernames for domain administration in Active Directory automatically.
+' ________________________________________________________________________________________________________________
 Sub main_operation()
 
 Dim operations As New cls_operations
