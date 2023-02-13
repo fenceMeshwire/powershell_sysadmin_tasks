@@ -3,7 +3,7 @@ Option Explicit
 ' ________________________________________________________________________________________________________________
 ' Methods are to be found at 31_prepare_users_methods.bas
 ' Methods are e.g. "get_filename", "import_csv_data", etc.
-' Program can be used in order to assign usernames for domain administration in Active Directory automatically.
+' Program can be used in order to assign usernames (e.g. CBarton) for domain administration in Active Directory automatically.
 ' Due to lack of knowledge provided in VBA code and is to be run in VBA with Excel.
 ' ________________________________________________________________________________________________________________
 Sub main_operation()
