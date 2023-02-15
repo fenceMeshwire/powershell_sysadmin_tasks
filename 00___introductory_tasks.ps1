@@ -1,4 +1,4 @@
-# 00_introductions.ps1
+# 00___introductory_tasks.ps1
 
 # Basic steps of configuration, after installation of Windows 2019 Server
 
