@@ -27,3 +27,8 @@ del folder
 #____________________________________________________________
 # Create a new TXT file
 New-Item textfile.txt
+
+#____________________________________________________________
+# Delete files with greedy matching
+# Filename begins with "samplefile" and ends with ".xlsm"
+del samplefile*.xlsm
