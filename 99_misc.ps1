@@ -9,6 +9,13 @@ start C:\temp
 wmic OS get OSArchitecture
 
 #____________________________________________________________
+# Get OS version information
+$PSVersionTable
+
+# Overview: Major, Minor, Build, Revision
+[System.Environment]::OSVersion.Version
+
+#____________________________________________________________
 # List directories in a directory:
 Get-ChildItem C:\Users\ -directory
 
